@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ласкаво просимо в Незабуток</title>
+  <title>Сторінка користувача | Незабуток</title>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
   <link rel="stylesheet" type="text/css" href="css/main.css"/>
   <!--[if lte IE 7]>
@@ -28,11 +28,15 @@
 
         <div class="col-xs-9">
           <div class="header-login">
-            <a href="#" data-modal="signup">Зареєструйтесь</a> | <a href="#" data-modal="login">Увійдіть</a>
+            <!--a href="#" data-modal="signup">Sign up</a> | <a href="#" data-modal="login">Log in</a-->
+            <a href="#">Ім'я Прізвище</a>
           </div>
           <div class="header-hd">
-            <p class="header-hd-hd">Незабуток</p>
-            <p class="header-hd-exp">Мудрий розпорядник часом і завданнями</p>
+            <!--p class="header-hd-hd">Незабуток</p>
+            <p class="header-hd-exp">Мудрий розпорядник часом і завданнями</p-->
+            <ul class="menu">
+              <li><a href="/">На головну</a></li>
+            </ul>
           </div>
         </div>
       </header><!-- /header -->
@@ -41,24 +45,7 @@
 
   <div class="container">
     <section class="row content">
-      <div class="col-xs-12">
-        <p class="subhd">Підзаголовок. Розкриття теми: для кого, що вирішує, яку користь принесе людям.</p>
-      </div>
-
-      <div class="col-xs-6">
-        <ul>
-          <li>Вигода 1</li>
-          <li>Вигода 2</li>
-          <li>Вигода 3</li>
-        </ul>
-      </div>
-      <div class="col-xs-6">
-        <ul>
-          <li>Вигода 4</li>
-          <li>Вигода 5</li>
-          <li>Вигода 6</li>
-        </ul>
-      </div>
+      a
     </section>
 
     <footer class="footer row">
@@ -73,21 +60,21 @@
     <div class="modals-box" id="signup">
       <form class="f-1">
         <div class="form-group">
-          <label class="f-1-label">Оберіть ім'я:</label>
-          <input type="text" class="form-control" placeholder="Ім'я" />
+          <label class="f-1-label">Name</label>
+          <input type="text" class="form-control" placeholder="Name" />
         </div>
 
         <div class="form-group">
-          <label class="f-1-label">Ваш e-mail:</label>
-          <input type="email" class="form-control" placeholder="E-mail" />
+          <label class="f-1-label">Email</label>
+          <input type="email" class="form-control" placeholder="Email" />
         </div>
 
         <div class="form-group">
-          <label class="f-1-label">Придумайте пароль:</label>
-          <input type="password" class="form-control" placeholder="Пароль" />
+          <label class="f-1-label">Password</label>
+          <input type="password" class="form-control" placeholder="Password" />
         </div>
 
-        <button type="submit" class="btn btn-default">Реєструюся</button>
+        <button type="submit" class="btn btn-default">Sign up</button>
       </form>
 
       <i class="modals-box-close" title="Close">X</i>
@@ -97,16 +84,16 @@
     <div class="modals-box" id="login">
       <form class="f-1">
         <div class="form-group">
-          <label class="f-1-label">E-mail:</label>
-          <input type="email" class="form-control" placeholder="E-mail" />
+          <label class="f-1-label">Email</label>
+          <input type="email" class="form-control" placeholder="Email" />
         </div>
 
         <div class="form-group">
-          <label class="f-1-label">Пароль:</label>
-          <input type="password" class="form-control" placeholder="Пароль" />
+          <label class="f-1-label">Password</label>
+          <input type="password" class="form-control" placeholder="Password" />
         </div>
 
-        <button type="submit" class="btn btn-default">Входжу</button>
+        <button type="submit" class="btn btn-default">Log In</button>
       </form>
 
       <i class="modals-box-close" title="Close">X</i>

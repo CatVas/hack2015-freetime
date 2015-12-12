@@ -55,7 +55,7 @@ button {
     border: 0; }
 
 input[type="text"], input[type="password"], textarea {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 
 h1 {font-size:2.9em;}
@@ -153,6 +153,14 @@ caption, th, td {
   font-size: 1.5em;
   margin:1.8em 0 0;
 }
+
+.menu {
+  margin: 1.2em 0 0;
+}
+.menu li {
+  margin: 0;
+}
+.menu li a {}
 
 .modals {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.2+0,0.2+100 */
