@@ -100,6 +100,13 @@ caption, th, td {
   padding: 8em 0 0;
 }
 
+.f-1 {}
+.f-1-label {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin: 0 0 0.5em;
+}
+
 .footer {
   border-top: 1px solid #888;
   text-align: center;
@@ -110,7 +117,7 @@ caption, th, td {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 999;
+  z-index: 10;
 }
 .header {
   background: #fff;
@@ -145,6 +152,48 @@ caption, th, td {
   float: right;
   font-size: 1.5em;
   margin:1.8em 0 0;
+}
+
+.modals {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.2+0,0.2+100 */
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.2) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33000000', endColorstr='#33000000',GradientType=0 ); /* IE6-9 */
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.modals-box {
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  display: none;
+  left: 50%;
+  margin:0 0 0 -15em;
+  padding: 3em 2em 2em;
+  position: absolute;
+  top: 5em;
+  width: 30em;
+}
+.modals-box .f-1 {}
+.modals-box-close {
+  color: #555;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: bold;
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+}
+.modals-box-close:hover {
+  color: #000;
 }
 
 .subhd {
