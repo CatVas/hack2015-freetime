@@ -31,7 +31,7 @@ footer, header, hgroup, menu, nav, section {
   display: block; }
 
 body {
-  font: 62.5%;
+  font: 62.5% Arial, Helvetica, sans-serif;
   line-height: 1; }
 
 html, body {
@@ -52,22 +52,29 @@ button {
     border: 0; }
 
 input[type="text"], input[type="password"], textarea {
-  border: 1px solid black; }
+  border: 1px solid black;
+}
 
-                         /*
-h1 {font-size:;}
-h2 {font-size:;}
-h3 {font-size:;}
-h4 {font-size:;}
-h5 {font-size:;}
-h6 {font-size:;}*/
+h1 {font-size:2.9em;}
+h2 {font-size:2.6em;}
+h3 {font-size:2.3em;}
+h4 {font-size:2em;}
+h5 {font-size:1.7em;}
+h6 {font-size:1.4em;}
+
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
-                         /*
-p, li {font-size:; line-height:; margin:; -webkit-text-size-adjust:none;}*/
+p, li {
+  font-size:1.4em;
+  line-height:1.4;
+  margin:1em 0;
+  -webkit-text-size-adjust:none;
+}
 strong {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 table {
   border-collapse: collapse;
@@ -81,3 +88,47 @@ caption, th, td {
   border: 1px solid black; }
 
 /*---classes---*/
+.footer {
+  border-top: 1px solid #888;
+  text-align: center;
+}
+
+.header {
+  border-bottom: 1px solid #888;
+  height: 8em;
+  padding:0.5em 0 0;
+}
+.header:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  visibility: hidden;
+  width: 0;
+}
+.header .header-hd {
+  float: left;
+  margin:1em 0 0;
+}
+.header .header-hd p {
+  margin: 0;
+}
+.header .header-hd-hd {
+  font-size: 3em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.header .header-hd-exp {
+  font-size: 1.2em;
+}
+.header .header-login {
+  float: right;
+  font-size: 1.5em;
+  margin:1.8em 0 0;
+}
+
+.subhd {
+  font-size: 2em;
+  font-style: italic;
+  text-align: center;
+}
