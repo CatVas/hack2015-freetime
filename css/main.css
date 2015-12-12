@@ -31,8 +31,11 @@ footer, header, hgroup, menu, nav, section {
   display: block; }
 
 body {
+  background: #fff;
+  color: #000;
   font: 62.5% Arial, Helvetica, sans-serif;
-  line-height: 1; }
+  line-height: 1;
+}
 
 html, body {
   height: 100%; }
@@ -85,15 +88,32 @@ caption, th, td {
 
 /*---helpers---*/
 .border {
-  border: 1px solid black; }
+  border: 1px solid black;
+}
 
 /*---classes---*/
+.container {
+  position: relative;
+}
+
+.content {
+  padding: 8em 0 0;
+}
+
 .footer {
   border-top: 1px solid #888;
   text-align: center;
 }
 
+.header-wr {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
 .header {
+  background: #fff;
   border-bottom: 1px solid #888;
   height: 8em;
   padding:0.5em 0 0;
