@@ -154,6 +154,19 @@ caption, th, td {
   margin:1.8em 0 0;
 }
 
+.map {
+  margin: 2em 0;
+}
+.map h1 {
+  margin: 0;
+}
+.map img {
+  max-width: 100%;
+}
+.map-holder {
+  margin: 1em 0 0;
+}
+
 .menu {
   margin: 1.2em 0 0;
 }
@@ -184,11 +197,11 @@ caption, th, td {
   -webkit-border-radius: 5px;
   display: none;
   left: 50%;
-  margin:0 0 0 -15em;
+  margin:0 0 0 -20em;
   padding: 3em 2em 2em;
-  position: absolute;
+  position: fixed;
   top: 5em;
-  width: 30em;
+  width: 40em;
 }
 .modals-box .f-1 {}
 .modals-box-close {
@@ -208,4 +221,94 @@ caption, th, td {
   font-size: 2em;
   font-style: italic;
   text-align: center;
+}
+
+.tasks {}
+.tasks h3 {
+  margin: 0 0 0.5em;
+}
+.tasks-add {
+  margin: 2em 0;
+  text-align: center;
+}
+.tasks-add-form {
+  display: none;
+  /*margin: 1em 0 0;*/
+}
+.tasks-add-success {
+  color: #5cb85c;
+  display: inline-block;
+  display: none;
+  font-size: 1.4em;
+  line-height: 1.43;
+  padding: 0.5em 0;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.tasks-list {
+  margin: 0 0 2em;
+}
+.tasks-list h3 {
+  font-size: 1.5em;
+}
+.tasks-list-btn {
+  text-align: center;
+}
+.tasks-list-btn .btn {
+  color: #fff;
+}
+.tasks-list-btn-status {
+  font-size: 1.4em;
+  margin: 0 1em 0 0;
+}
+.tasks-list-description {
+  margin: 2em 0 1em;
+}
+.tasks-list-info {}
+.tasks-list-info li {
+  font-size: 1.2em;
+  margin: 0;
+}
+.tasks-list-info-data {
+  font-weight: bold;
+}
+
+.userinfo {
+  border-bottom: 1px solid #888;
+  margin: 1em 0;
+}
+.userinfo:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  visibility: hidden;
+  width: 0;
+}
+.userinfo-ava {
+  float: left;
+  margin: 0 2em 0 0;
+  height: 10em;
+  width: 10em;
+}
+.userinfo-info {
+  float: left;
+  margin: 0;
+}
+.userinfo-info-name {
+  font-size: 2.5em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/*--- Wrapper ---*/
+.wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+
+/*--- jQuery UI ---*/
+.ui-accordion .ui-accordion-header {
+  font-size: 1.5em;
 }

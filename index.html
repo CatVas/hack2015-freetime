@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ласкаво просимо в Незабуток</title>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
   <link rel="stylesheet" type="text/css" href="css/main.css"/>
   <!--[if lte IE 7]>
     <link rel="stylesheet" type="text/css" href="css/ie.css"/>
@@ -17,104 +18,106 @@
 </head>
 
 <body>
-  <div class="header-wr">
+  <div class="wrapper">
+    <div class="header-wr">
+      <div class="container">
+        <header class="header row">
+          <div class="col-xs-3">
+            <a href="/">
+              <i class="logo">Logo</i>
+            </a>
+          </div>
+
+          <div class="col-xs-9">
+            <div class="header-login">
+              <a href="#" data-modal="signup">Зареєструйтесь</a> | <a href="#" data-modal="login">Увійдіть</a>
+            </div>
+            <div class="header-hd">
+              <p class="header-hd-hd">Незабуток</p>
+              <p class="header-hd-exp">Мудрий розпорядник часом і завданнями</p>
+            </div>
+          </div>
+        </header><!-- /header -->
+      </div>
+    </div><!-- /header-wr -->
+
     <div class="container">
-      <header class="header row">
-        <div class="col-xs-3">
-          <a href="/">
-            <i class="logo">Logo</i>
-          </a>
+      <section class="row content">
+        <div class="col-xs-12">
+          <p class="subhd">Підзаголовок. Розкриття теми: для кого, що вирішує, яку користь принесе людям.</p>
         </div>
 
-        <div class="col-xs-9">
-          <div class="header-login">
-            <a href="#" data-modal="signup">Зареєструйтесь</a> | <a href="#" data-modal="login">Увійдіть</a>
+        <div class="col-xs-6">
+          <ul>
+            <li>Вигода 1</li>
+            <li>Вигода 2</li>
+            <li>Вигода 3</li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <ul>
+            <li>Вигода 4</li>
+            <li>Вигода 5</li>
+            <li>Вигода 6</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer class="footer row">
+        <div class="col-xs-12">
+          <p>Copyright &copy; 2015</p>
+        </div>
+      </footer><!-- /footer -->
+    </div><!-- /container -->
+
+    <div class="modals">
+      <!-- Sign Up -->
+      <div class="modals-box" id="signup">
+        <form class="f-1">
+          <div class="form-group">
+            <label class="f-1-label">Оберіть ім'я:</label>
+            <input type="text" class="form-control" placeholder="Ім'я" />
           </div>
-          <div class="header-hd">
-            <p class="header-hd-hd">Незабуток</p>
-            <p class="header-hd-exp">Мудрий розпорядник часом і завданнями</p>
+
+          <div class="form-group">
+            <label class="f-1-label">Ваш e-mail:</label>
+            <input type="email" class="form-control" placeholder="E-mail" />
           </div>
-        </div>
-      </header><!-- /header -->
-    </div>
-  </div><!-- /header-wr -->
 
-  <div class="container">
-    <section class="row content">
-      <div class="col-xs-12">
-        <p class="subhd">Підзаголовок. Розкриття теми: для кого, що вирішує, яку користь принесе людям.</p>
-      </div>
+          <div class="form-group">
+            <label class="f-1-label">Придумайте пароль:</label>
+            <input type="password" class="form-control" placeholder="Пароль" />
+          </div>
 
-      <div class="col-xs-6">
-        <ul>
-          <li>Вигода 1</li>
-          <li>Вигода 2</li>
-          <li>Вигода 3</li>
-        </ul>
-      </div>
-      <div class="col-xs-6">
-        <ul>
-          <li>Вигода 4</li>
-          <li>Вигода 5</li>
-          <li>Вигода 6</li>
-        </ul>
-      </div>
-    </section>
+          <button type="submit" class="btn btn-primary">Реєструюся</button>
+        </form>
 
-    <footer class="footer row">
-      <div class="col-xs-12">
-        <p>Copyright &copy; 2015</p>
-      </div>
-    </footer><!-- /footer -->
-  </div><!-- /container -->
+        <i class="modals-box-close" title="Close">X</i>
+      </div><!-- /signup -->
 
-  <div class="modals">
-    <!-- Sign Up -->
-    <div class="modals-box" id="signup">
-      <form class="f-1">
-        <div class="form-group">
-          <label class="f-1-label">Оберіть ім'я:</label>
-          <input type="text" class="form-control" placeholder="Ім'я" />
-        </div>
+      <!-- Log In -->
+      <div class="modals-box" id="login">
+        <form class="f-1">
+          <div class="form-group">
+            <label class="f-1-label">E-mail:</label>
+            <input type="email" class="form-control" placeholder="E-mail" />
+          </div>
 
-        <div class="form-group">
-          <label class="f-1-label">Ваш e-mail:</label>
-          <input type="email" class="form-control" placeholder="E-mail" />
-        </div>
+          <div class="form-group">
+            <label class="f-1-label">Пароль:</label>
+            <input type="password" class="form-control" placeholder="Пароль" />
+          </div>
 
-        <div class="form-group">
-          <label class="f-1-label">Придумайте пароль:</label>
-          <input type="password" class="form-control" placeholder="Пароль" />
-        </div>
+          <button type="submit" class="btn btn-primary">Входжу</button>
+        </form>
 
-        <button type="submit" class="btn btn-default">Реєструюся</button>
-      </form>
-
-      <i class="modals-box-close" title="Close">X</i>
-    </div><!-- /signup -->
-
-    <!-- Log In -->
-    <div class="modals-box" id="login">
-      <form class="f-1">
-        <div class="form-group">
-          <label class="f-1-label">E-mail:</label>
-          <input type="email" class="form-control" placeholder="E-mail" />
-        </div>
-
-        <div class="form-group">
-          <label class="f-1-label">Пароль:</label>
-          <input type="password" class="form-control" placeholder="Пароль" />
-        </div>
-
-        <button type="submit" class="btn btn-default">Входжу</button>
-      </form>
-
-      <i class="modals-box-close" title="Close">X</i>
-    </div><!-- /login -->
-
-  </div><!-- /modals -->
+        <i class="modals-box-close" title="Close">X</i>
+      </div><!-- /login -->
+    </div><!-- /modals -->
+  </div><!-- /wrapper -->
 
   <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
   <!--script type="text/javascript" src="js/bootstrap.js"></script-->
   <script type="text/javascript" src="js/scripts.js"></script>

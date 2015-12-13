@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Сторінка користувача | Незабуток</title>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
   <link rel="stylesheet" type="text/css" href="css/main.css"/>
   <!--[if lte IE 7]>
     <link rel="stylesheet" type="text/css" href="css/ie.css"/>
@@ -17,91 +18,255 @@
 </head>
 
 <body>
-  <div class="header-wr">
-    <div class="container">
-      <header class="header row">
-        <div class="col-xs-3">
-          <a href="/">
-            <i class="logo">Logo</i>
-          </a>
-        </div>
-
-        <div class="col-xs-9">
-          <div class="header-login">
-            <!--a href="#" data-modal="signup">Sign up</a> | <a href="#" data-modal="login">Log in</a-->
-            <a href="#">Ім'я Прізвище</a>
+  <div class="wrapper">
+    <div class="header-wr">
+      <div class="container">
+        <header class="header row">
+          <div class="col-xs-3">
+            <a href="index.html">
+              <i class="logo">Logo</i>
+            </a>
           </div>
-          <div class="header-hd">
-            <!--p class="header-hd-hd">Незабуток</p>
-            <p class="header-hd-exp">Мудрий розпорядник часом і завданнями</p-->
-            <ul class="menu">
-              <li><a href="/">На головну</a></li>
-            </ul>
+
+          <div class="col-xs-9">
+            <div class="header-login">
+              <!--a href="#" data-modal="signup">Sign up</a> | <a href="#" data-modal="login">Log in</a-->
+              <a href="#">Ім'я Прізвище</a> | <a href="#">Вийти</a>
+            </div>
+            <div class="header-hd">
+              <!--p class="header-hd-hd">Незабуток</p>
+              <p class="header-hd-exp">Мудрий розпорядник часом і завданнями</p-->
+              <ul class="menu">
+                <li><a href="index.html">На головну</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </header><!-- /header -->
-    </div>
-  </div><!-- /header-wr -->
-
-  <div class="container">
-    <section class="row content">
-      a
-    </section>
-
-    <footer class="footer row">
-      <div class="col-xs-12">
-        <p>Copyright &copy; 2015</p>
+        </header><!-- /header -->
       </div>
-    </footer><!-- /footer -->
-  </div><!-- /container -->
+    </div><!-- /header-wr -->
 
-  <div class="modals">
-    <!-- Sign Up -->
-    <div class="modals-box" id="signup">
-      <form class="f-1">
-        <div class="form-group">
-          <label class="f-1-label">Name</label>
-          <input type="text" class="form-control" placeholder="Name" />
+    <div class="container">
+      <section class="row content">
+        <section class="col-xs-8">
+          <!--header class="userinfo">
+            <i class="userinfo-ava">
+              <img class="img-thumbnail" src="" alt=""/>
+            </i>
+
+            <div class="userinfo-info">
+              <p class="userinfo-info-name">Ім'я Прізвище</p>
+            </div>
+          </header--><!-- /userinfo -->
+
+          <div class="map">
+            <h1>Карта завдань</h1>
+
+            <div class="map-holder">
+              <img src="images/google-map.jpg" alt=""/>
+            </div>
+          </div><!-- /map -->
+
+          <div class="tasks row">
+            <div class="col-md-6">
+              <h3>Завдання для мене</h3>
+              <div class="tasks-list">
+                <h3>{{title}}: Назва завдання</h3>
+                <div>
+                  <ul class="tasks-list-info">
+                    <li>Від кого: <span class="tasks-list-info-data">{{byWhom}}</span></li>
+                    <li>Бажаний пріоритет: <span class="tasks-list-info-data">{{priority}}</span></li>
+                    <li>Задано: <span class="tasks-list-info-data">{{posted}}</span></li>
+                    <li>Дедлайн: <span class="tasks-list-info-data">{{deadline}}</span></li>
+                  </ul>
+
+                  <div class="tasks-list-description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores minus, voluptatum consequatur nobis quos, quibusdam esse officiis vel expedita id ullam, soluta provident! Vel, laudantium? Tempora eveniet, nihil voluptatum blanditiis?</p>
+                  </div>
+                  <div class="tasks-list-btn">
+                    <a class="btn btn-primary" href="#">Завершити</a><!-- Лише завдання для мене -->
+                    <!--a class="btn btn-warning" href="#">Відновити</a-->
+                  </div>
+                </div>
+
+                <h3>{{title}}: Назва завдання</h3>
+                <div>
+                  <ul class="tasks-list-info">
+                    <li>Від кого: <span class="tasks-list-info-data">{{byWhom}}</span></li>
+                    <li>Бажаний пріоритет: <span class="tasks-list-info-data">{{priority}}</span></li>
+                    <li>Задано: <span class="tasks-list-info-data">{{posted}}</span></li>
+                    <li>Дедлайн: <span class="tasks-list-info-data">{{deadline}}</span></li>
+                  </ul>
+
+                  <div class="tasks-list-description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores minus, voluptatum consequatur nobis quos, quibusdam esse officiis vel expedita id ullam, soluta provident! Vel, laudantium? Tempora eveniet, nihil voluptatum blanditiis?</p>
+                  </div>
+                  <div class="tasks-list-btn">
+                    <span class="text-success tasks-list-btn-status">Завершено</span>
+                    <a class="btn btn-warning" href="#">Відновити</a><!-- Лише мої завдання для інших -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <h3>Завдання друзям</h3>
+              <div class="tasks-list">
+                <h3>{{title}}: Назва завдання</h3>
+                <div>
+                  <ul class="tasks-list-info">
+                    <li>Від кого: <span class="tasks-list-info-data">{{byWhom}}</span></li>
+                    <li>Бажаний пріоритет: <span class="tasks-list-info-data">{{priority}}</span></li>
+                    <li>Задано: <span class="tasks-list-info-data">{{posted}}</span></li>
+                    <li>Дедлайн: <span class="tasks-list-info-data">{{deadline}}</span></li>
+                  </ul>
+
+                  <div class="tasks-list-description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores minus, voluptatum consequatur nobis quos, quibusdam esse officiis vel expedita id ullam, soluta provident! Vel, laudantium? Tempora eveniet, nihil voluptatum blanditiis?</p>
+                  </div>
+                  <div class="tasks-list-btn">
+                    <span class="text-success tasks-list-btn-status">Завершено</span>
+                    <a class="btn btn-warning" href="#">Відновити</a><!-- Лише мої завдання для інших -->
+                  </div>
+                </div>
+
+                <h3>{{title}}: Назва завдання</h3>
+                <div>
+                  <ul class="tasks-list-info">
+                    <li>Від кого: <span class="tasks-list-info-data">{{byWhom}}</span></li>
+                    <li>Бажаний пріоритет: <span class="tasks-list-info-data">{{priority}}</span></li>
+                    <li>Задано: <span class="tasks-list-info-data">{{posted}}</span></li>
+                    <li>Дедлайн: <span class="tasks-list-info-data">{{deadline}}</span></li>
+                  </ul>
+
+                  <div class="tasks-list-description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores minus, voluptatum consequatur nobis quos, quibusdam esse officiis vel expedita id ullam, soluta provident! Vel, laudantium? Tempora eveniet, nihil voluptatum blanditiis?</p>
+                  </div>
+                  <div class="tasks-list-btn">
+                    <a class="btn btn-primary" href="#">Завершити</a><!-- Лише завдання для мене -->
+                    <!--a class="btn btn-warning" href="#">Відновити</a-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- /tasks -->
+        </section>
+
+        <article class="col-xs-4">
+          <!-- Add task -->
+          <div class="row">
+            <div class="col-xs-12 tasks-add">
+              <a class="btn btn-success" data-modal="add-task" href="#">Дати завдання</a>
+              <span class="tasks-add-success">Завдання успішно додано!</span>
+
+              <form class="tasks-add-form">
+                <p class="text-danger">Усі поля форми &mdash; обов'язкові!</p>
+                <div class="form-group">
+                  <!--label class="f-1-label">Назва завдання:</label-->
+                  <input type="text" class="form-control" name="task_name" placeholder="Назва завдання" />
+                </div>
+
+                <div class="form-group">
+                  <!--label class="f-1-label">Що зробити:</label-->
+                  <textarea name="task_description" class="form-control" placeholder="Що зробити"></textarea>
+                </div>
+
+                <input type="hidden" name="by_whom" value="{{currentUserId}}" />
+
+                <div class="form-group">
+                  <!--label class="f-1-label">Кому задано:</label-->
+                  <select class="form-control">
+                    <option value="">Кому задано</option>
+                    <option value="{{userId}}">Антон</option>
+                    <option value="{{userId}}">Василь</option>
+                    <option value="{{userId}}">Наталка</option>
+                    <option value="{{userId}}">Сергій</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="f-1-label">Клікніть карту зліва для задання координат. Отримані значення можете уточнити вручну</label>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" name="task_latitude" placeholder="Широта" />
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" name="task_longtitude" placeholder="Довгота" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <!--label class="f-1-label">Пріоритет завдання (цифрою):</label-->
+                  <input type="text" class="form-control" name="task_priority" placeholder="Пріоритет завдання (цифрою)" />
+                </div>
+
+                <div class="form-group">
+                  <!--label class="f-1-label">Пріоритет завдання (цифрою):</label-->
+                  <input type="text" class="form-control" name="task_deadline" placeholder="Дата завершення" />
+                </div>
+
+                <button type="submit" class="btn btn-primary">Даю завдання</button>
+              </form>
+            </div>
+          </div><!-- /Add task -->
+        </article>
+      </section>
+
+      <footer class="footer row">
+        <div class="col-xs-12">
+          <p>Copyright &copy; 2015</p>
         </div>
+      </footer><!-- /footer -->
+    </div><!-- /container -->
 
-        <div class="form-group">
-          <label class="f-1-label">Email</label>
-          <input type="email" class="form-control" placeholder="Email" />
-        </div>
+    <div class="modals">
+      <!-- Sign Up -->
+      <div class="modals-box" id="signup">
+        <form class="f-1">
+          <div class="form-group">
+            <label class="f-1-label">Name</label>
+            <input type="text" class="form-control" placeholder="Name" />
+          </div>
 
-        <div class="form-group">
-          <label class="f-1-label">Password</label>
-          <input type="password" class="form-control" placeholder="Password" />
-        </div>
+          <div class="form-group">
+            <label class="f-1-label">Email</label>
+            <input type="email" class="form-control" placeholder="Email" />
+          </div>
 
-        <button type="submit" class="btn btn-default">Sign up</button>
-      </form>
+          <div class="form-group">
+            <label class="f-1-label">Password</label>
+            <input type="password" class="form-control" placeholder="Password" />
+          </div>
 
-      <i class="modals-box-close" title="Close">X</i>
-    </div><!-- /signup -->
+          <button type="submit" class="btn btn-primary">Sign up</button>
+        </form>
 
-    <!-- Log In -->
-    <div class="modals-box" id="login">
-      <form class="f-1">
-        <div class="form-group">
-          <label class="f-1-label">Email</label>
-          <input type="email" class="form-control" placeholder="Email" />
-        </div>
+        <i class="modals-box-close" title="Close">X</i>
+      </div><!-- /signup -->
 
-        <div class="form-group">
-          <label class="f-1-label">Password</label>
-          <input type="password" class="form-control" placeholder="Password" />
-        </div>
+      <!-- Log In -->
+      <div class="modals-box" id="login">
+        <form class="f-1">
+          <div class="form-group">
+            <label class="f-1-label">Email</label>
+            <input type="email" class="form-control" placeholder="Email" />
+          </div>
 
-        <button type="submit" class="btn btn-default">Log In</button>
-      </form>
+          <div class="form-group">
+            <label class="f-1-label">Password</label>
+            <input type="password" class="form-control" placeholder="Password" />
+          </div>
 
-      <i class="modals-box-close" title="Close">X</i>
-    </div><!-- /login -->
+          <button type="submit" class="btn btn-primary">Log In</button>
+        </form>
 
-  </div><!-- /modals -->
+        <i class="modals-box-close" title="Close">X</i>
+      </div><!-- /login -->
+    </div><!-- /modals -->
+  </div><!-- /wrapper -->
 
   <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
   <!--script type="text/javascript" src="js/bootstrap.js"></script-->
   <script type="text/javascript" src="js/scripts.js"></script>
