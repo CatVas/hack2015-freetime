@@ -62,11 +62,18 @@ jQuery(function($){
 	});
 	/*--- /Task form ---*/
 
+	/*--- Task list ---*/
+	$('.tasks-list .tasks-list-btn .btn').click(function(ev){
+		ev.preventDefault();
+	});
+	/*--- /Task list ---*/
+
 
 	/*--- Accordion ---*/
 	$('.tasks-list').accordion();
 
 
 	/*--- Datepicker ---*/
-	$('.tasks-add-form [name="task_deadline"]').datepicker({});
+	$.datepicker.setDefaults( $.datepicker.regional['uk'] );
+	$('.tasks-add-form [name="task_deadline"]').datepicker();
 });

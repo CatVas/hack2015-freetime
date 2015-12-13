@@ -22,20 +22,24 @@
     <div class="header-wr">
       <div class="container">
         <header class="header row">
-          <div class="col-xs-3">
+          <div class="col-xs-1">
             <a href="index.html">
-              <i class="logo">Logo</i>
+              <i class="logo">
+                <img src="images/logo.png" alt=""/>
+              </i>
             </a>
           </div>
 
-          <div class="col-xs-9">
+          <div class="col-xs-11">
             <div class="header-login">
               <!--a href="#" data-modal="signup">Sign up</a> | <a href="#" data-modal="login">Log in</a-->
-              <a href="#">Ім'я Прізвище</a> | <a href="#">Вийти</a>
+              <!--a href="#">Ім'я Прізвище</a--><span>Ласкаво просимо!</span> | <a href="#">Вийти</a>
             </div>
             <div class="header-hd">
-              <!--p class="header-hd-hd">Незабуток</p>
-              <p class="header-hd-exp">Мудрий розпорядник часом і завданнями</p-->
+              <p class="header-hd-hd">Незабуток</p>
+              <p class="header-hd-exp">Мудрий розпорядник часом і завданнями</p>
+            </div>
+            <div class="header-hd">
               <ul class="menu">
                 <li><a href="index.html">На головну</a></li>
               </ul>
@@ -48,15 +52,17 @@
     <div class="container">
       <section class="row content">
         <section class="col-xs-8">
-          <!--header class="userinfo">
+          <header class="userinfo">
             <i class="userinfo-ava">
-              <img class="img-thumbnail" src="" alt=""/>
+              <img src="" alt=""/>
             </i>
 
             <div class="userinfo-info">
               <p class="userinfo-info-name">Ім'я Прізвище</p>
+              <a class="btn btn-default" href="#">Додати в друзі</a>
+              <a class="btn btn-default" href="#">Видалити з друзів</a>
             </div>
-          </header--><!-- /userinfo -->
+          </header><!-- /userinfo -->
 
           <div class="map">
             <h1>Карта завдань</h1>
@@ -205,10 +211,53 @@
                   <input type="text" class="form-control" name="task_deadline" placeholder="Дата завершення" />
                 </div>
 
+                <div class="form-group">
+                  <!--label class="f-1-label">Тривалість завдання, хв:</label-->
+                  <input type="text" class="form-control" name="task_estimate" placeholder="Тривалість самого завдання, хв" />
+                </div>
+
                 <button type="submit" class="btn btn-primary">Даю завдання</button>
               </form>
-            </div>
-          </div><!-- /Add task -->
+            </div><!-- /Add task -->
+
+            <div class="col-xs-12 friends">
+              <p class="friends-hd">Друзі:</p>
+              <ul class="friends-list">
+                <li>
+                  <a href="#">
+                    <i class="friends-list-img">
+                      <img src="" alt="" />
+                    </i>
+                    <span class="friends-list-name">Сергій</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="friends-list-img">
+                      <img src="" alt="" />
+                    </i>
+                    <span class="friends-list-name">Наталка</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="friends-list-img">
+                      <img src="" alt="" />
+                    </i>
+                    <span class="friends-list-name">Антон</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="friends-list-img">
+                      <img src="" alt="" />
+                    </i>
+                    <span class="friends-list-name">Василь</span>
+                  </a>
+                </li>
+              </ul>
+            </div><!-- /friends -->
+          </div>
         </article>
       </section>
 
